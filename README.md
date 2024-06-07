@@ -1,1 +1,1 @@
-# Урок  JS to REACT
+# Урок JS to REACT
