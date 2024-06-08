@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
+import "./index.css";
 
 // Features Component
 const features = [
-  '✅ Push to deploy',
-  '✅ SSL certificates',
-  '✅ Simple queues',
+  "✅ Push to deploy",
+  "✅ SSL certificates",
+  "✅ Simple queues",
 ];
 
 const Features = () => (
-  <div>
+  <div className="features">
     <h1>App Features</h1>
     <ul>
       {features.map((item, index) => (
@@ -21,41 +22,41 @@ const Features = () => (
 // About Component
 const members = [
   {
-    name: 'Lindsay Walton',
-    role: 'Front-end Developer',
+    name: "Lindsay Walton",
+    role: "Front-end Developer",
     imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    twitterUrl: 'https://twitter.com/lindsay',
-    linkedinUrl: 'https://linkedin.com/lindsay',
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    twitterUrl: "https://twitter.com/lindsay",
+    linkedinUrl: "https://linkedin.com/lindsay",
   },
   {
-    name: 'Tom Cook',
-    role: 'Director of Product',
+    name: "Tom Cook",
+    role: "Director of Product",
     imageUrl:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    twitterUrl: 'https://twitter.com/tom',
-    linkedinUrl: 'https://linkedin.com/tom',
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    twitterUrl: "https://twitter.com/tom",
+    linkedinUrl: "https://linkedin.com/tom",
   },
   {
-    name: 'Courtney Henry',
-    role: 'Designer',
+    name: "Courtney Henry",
+    role: "Designer",
     imageUrl:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    twitterUrl: 'https://twitter.com/courtney',
-    linkedinUrl: 'https://linkedin.com/courtney',
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    twitterUrl: "https://twitter.com/courtney",
+    linkedinUrl: "https://linkedin.com/courtney",
   },
 ];
 
 const Member = ({ member }) => (
   <div className="member">
-    <img src={member.imageUrl} alt={member.name} width="100" />
+    <img src={member.imageUrl} alt={member.name} />
     <h3>{member.name}</h3>
     <p>{member.role}</p>
   </div>
 );
 
 const About = () => (
-  <div>
+  <div className="about">
     <header>
       <h1>Who we are</h1>
       <h2>Meet the team that makes this all possible</h2>
@@ -71,24 +72,24 @@ const About = () => (
 // Footer Component
 const links = [
   {
-    text: 'About',
-    href: '/company/about',
+    text: "About",
+    href: "/company/about",
   },
   {
-    text: 'Pricing',
-    href: '/support/pricing',
+    text: "Pricing",
+    href: "/support/pricing",
   },
   {
-    text: 'Jobs',
-    href: '/company/jobs',
+    text: "Jobs",
+    href: "/company/jobs",
   },
   {
-    text: 'Press',
-    href: '/company/press',
+    text: "Press",
+    href: "/company/press",
   },
   {
-    text: 'Documentation',
-    href: '/support/docs',
+    text: "Documentation",
+    href: "/support/docs",
   },
 ];
 
@@ -99,12 +100,12 @@ const Link = ({ link }) => (
 );
 
 const Footer = () => (
-  <footer>
+  <footer className="footer">
     <section>
       <h4>Support</h4>
       <div>
         {links
-          .filter((link) => link.href.includes('support'))
+          .filter((link) => link.href.includes("support"))
           .map((link, index) => (
             <Link key={index} link={link} />
           ))}
@@ -114,7 +115,7 @@ const Footer = () => (
       <h4>Company</h4>
       <div>
         {links
-          .filter((link) => link.href.includes('company'))
+          .filter((link) => link.href.includes("company"))
           .map((link, index) => (
             <Link key={index} link={link} />
           ))}
@@ -127,68 +128,62 @@ const Footer = () => (
 const todos = [
   {
     done: false,
-    text: 'Wash dishes',
+    text: "Wash dishes",
   },
   {
     done: true,
-    text: 'Pick up laundry',
+    text: "Pick up laundry",
   },
   {
     done: true,
-    text: 'Feed dog',
+    text: "Feed dog",
   },
 ];
 
 const TodoItem = ({ todo }) => (
   <li>
-    {todo.done ? '✅' : '❌'} {todo.text}
+    {todo.done ? "✅" : "❌"} {todo.text}
   </li>
 );
 
 const TodoList = () => (
-  <main>
+  <div className="todo-list">
     <h1>What I did today</h1>
     <ul>
       {todos.map((todo, index) => (
         <TodoItem key={index} todo={todo} />
       ))}
     </ul>
-  </main>
+  </div>
 );
 
 // Recipes Component
 const recipes = [
   {
     isVegetarian: true,
-    name: 'Greek Salad',
-    ingredients: ['tomatoes', 'cucumber', 'onion', 'olives', 'feta'],
+    name: "Greek Salad",
+    ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
   },
   {
     isVegetarian: false,
-    name: 'Hawaiian Pizza',
+    name: "Hawaiian Pizza",
     ingredients: [
-      'pizza crust',
-      'pizza sauce',
-      'mozzarella',
-      'ham',
-      'pineapple',
+      "pizza crust",
+      "pizza sauce",
+      "mozzarella",
+      "ham",
+      "pineapple",
     ],
   },
   {
     isVegetarian: true,
-    name: 'Hummus',
-    ingredients: [
-      'chickpeas',
-      'olive oil',
-      'garlic cloves',
-      'lemon',
-      'tahini',
-    ],
+    name: "Hummus",
+    ingredients: ["chickpeas", "olive oil", "garlic cloves", "lemon", "tahini"],
   },
 ];
 
 const Recipe = ({ recipe }) => (
-  <div>
+  <div className="recipe">
     <h3>{recipe.name}</h3>
     <ul>
       {recipe.ingredients.map((ingredient, index) => (
@@ -199,7 +194,7 @@ const Recipe = ({ recipe }) => (
 );
 
 const Recipes = () => (
-  <div>
+  <div className="recipes">
     <h1>Vegetarian Recipes</h1>
     {recipes
       .filter((recipe) => recipe.isVegetarian)
@@ -212,22 +207,15 @@ const Recipes = () => (
 // Video Component
 const VideoComponent = () => {
   const videoSrc =
-    'https://reactbootcamp.nyc3.digitaloceanspaces.com/big-buck-bunny.mp4';
-
-  const buttonStyle = {
-    margin: '5px',
-    padding: '10px',
-    color: 'white',
-    cursor: 'pointer',
-  };
+    "https://reactbootcamp.nyc3.digitaloceanspaces.com/big-buck-bunny.mp4";
 
   return (
-    <div>
-      <h1 style={{ fontSize: '32px' }}>Видео с кроликом</h1>
-      <video src={videoSrc} style={{ width: '300px', height: '200px' }} controls></video>
+    <div className="video-component">
+      <h1>Видео с кроликом</h1>
+      <video src={videoSrc} controls></video>
       <br />
-      <button style={{ ...buttonStyle, backgroundColor: 'green' }}>Like 👍</button>
-      <button style={{ ...buttonStyle, backgroundColor: 'red' }}>Dislike 👎</button>
+      <button className="like-button">Like 👍</button>
+      <button className="dislike-button">Dislike 👎</button>
     </div>
   );
 };
@@ -238,8 +226,10 @@ function App() {
       <Features />
       <About />
       <Footer />
-      <TodoList />
-      <Recipes />
+      <div className="main-content">
+        <TodoList />
+        <Recipes />
+      </div>
       <VideoComponent />
     </div>
   );

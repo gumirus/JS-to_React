@@ -39,13 +39,16 @@ body {
 
 /* Footer */
 .footer {
+  display: flex;
+  justify-content: space-between;
   margin-top: 40px;
   padding: 20px;
   background-color: #f1f1f1;
 }
 
 .footer section {
-  margin-bottom: 20px;
+  flex: 1;
+  margin: 0 10px;
 }
 
 .footer a {
@@ -53,14 +56,19 @@ body {
   text-decoration: none;
 }
 
-/* TodoList */
-.todo-list {
+/* TodoList and Recipes */
+.main-content {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 
-/* Recipes */
+.todo-list {
+  width: 45%;
+}
+
 .recipes {
-  margin-bottom: 40px;
+  width: 45%;
 }
 
 .recipe {
@@ -83,7 +91,8 @@ body {
   height: 200px;
 }
 
-.like-button, .dislike-button {
+.like-button,
+.dislike-button {
   margin: 5px;
   padding: 10px;
   color: white;
