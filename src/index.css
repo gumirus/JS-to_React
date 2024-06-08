@@ -1,13 +1,100 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Features */
+.features {
+  margin-bottom: 40px;
+}
+
+/* About */
+.about header {
+  margin-bottom: 20px;
+}
+
+.members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.member {
+  text-align: left;
+  margin: 10px;
+}
+
+.member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.footer section {
+  margin-bottom: 20px;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* TodoList */
+.todo-list {
+  margin-bottom: 40px;
+}
+
+/* Recipes */
+.recipes {
+  margin-bottom: 40px;
+}
+
+.recipe {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Video Component */
+.video-component {
+  margin-top: 40px;
+}
+
+.video-component h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.video-component video {
+  width: 300px;
+  height: 200px;
+}
+
+.like-button, .dislike-button {
+  margin: 5px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.like-button {
+  background-color: green;
+}
+
+.dislike-button {
+  background-color: red;
 }

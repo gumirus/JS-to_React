@@ -209,6 +209,29 @@ const Recipes = () => (
   </div>
 );
 
+// Video Component
+const VideoComponent = () => {
+  const videoSrc =
+    'https://reactbootcamp.nyc3.digitaloceanspaces.com/big-buck-bunny.mp4';
+
+  const buttonStyle = {
+    margin: '5px',
+    padding: '10px',
+    color: 'white',
+    cursor: 'pointer',
+  };
+
+  return (
+    <div>
+      <h1 style={{ fontSize: '32px' }}>Видео с кроликом</h1>
+      <video src={videoSrc} style={{ width: '300px', height: '200px' }} controls></video>
+      <br />
+      <button style={{ ...buttonStyle, backgroundColor: 'green' }}>Like 👍</button>
+      <button style={{ ...buttonStyle, backgroundColor: 'red' }}>Dislike 👎</button>
+    </div>
+  );
+};
+
 function App() {
   return (
     <div className="App">
@@ -217,9 +240,9 @@ function App() {
       <Footer />
       <TodoList />
       <Recipes />
+      <VideoComponent />
     </div>
   );
 }
 
 export default App;
-
